@@ -1,6 +1,7 @@
 steps:
   # Passo 1: Compila a aplicação Java e cria o arquivo .jar
   - name: 'maven:3.9.6-eclipse-temurin-21-alpine'
+    entrypoint: mvn
     args: ['package', '-DskipTests']
     
   # Passo 2: Constrói a imagem Docker
