@@ -18,3 +18,5 @@ steps:
       - 'gcr.io/$PROJECT_ID/nome-do-seu-servico:latest'
       - '--region'
       - 'southamerica-east1'
+	options:
+	  logging: CLOUD_LOGGING_ONLY
