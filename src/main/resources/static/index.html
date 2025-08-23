@@ -116,7 +116,7 @@
             async function fetchAndDisplayLists() {
                 try {
                     // Chama o endpoint GET /lists do seu GameListController
-                    const response = await fetch('http://localhost:8080/lists');
+                    const response = await fetch('/lists');
                     const lists = await response.json(); // Converte a resposta para JSON
                     gameListsElement.innerHTML = '';
                     lists.forEach(list => {
@@ -143,7 +143,7 @@
                 gamesElement.innerHTML = '<p>Carregando...</p>';
                 try {
                     // Chama o endpoint GET /lists/{listId}/games do seu GameListController
-                    const response = await fetch(`http://localhost:8080/lists/${listId}/games`);
+                    const response = await fetch(`/lists/${listId}/games`);
                     const games = await response.json();
                     gamesElement.innerHTML = '';
                     if (games.length === 0) {
